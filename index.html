@@ -1,0 +1,81 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>网站反馈</title>
+</head>
+
+<style>
+    .parent {
+      display: flex;
+      box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+      min-width: 0;
+    }
+    
+    .control {
+      position: fixed;
+      bottom: 0;
+      overflow: hidden;
+      max-height:200px;
+      width: 85%;
+      padding: 20px;
+      box-shadow: 0 -2px 5px rgba(0,0,0,0.15);
+      z-index: 999;
+      left: 50%; /* 水平居中 */
+    transform: translate(-50%,0); /* 通过平移实现真正的居中 */
+     
+    }
+    
+    .title{
+    position: fixed;
+    top: 0;
+    background:#999999;
+    width:100%;
+    overflow: hidden;
+    height:50px;
+    padding:10px;
+    border-radius:0px 0px 20px 20px;
+    box-shadow: 5px 5px 10px rgba(-0.5,-0.1,0,-0.15);
+    z-index:998;
+    left: 50%; /* 水平居中 */
+    transform: translate(-50%,0); /* 通过平移实现真正的居中 */
+     
+    }
+    
+    @media (prefers-color-scheme: dark) {
+      :root {
+    --bg-color: #666666;
+    --text-color: #e0e0e0;
+      }
+    }
+    
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-color);
+    }
+    
+    
+</style>
+
+<body>
+    <center>
+        <div class="title">
+            <h2>网站反馈系统</h2>
+        </div>
+    </center>
+    <div style="position: relative;top:70px;" id="list"></div>
+    <center>
+        <div class="control" style="background:#999999;border-radius:20px 20px 0px 0px;">
+            <!-- <a style="backgroudn:white;">反馈内容：</a> -->
+            <!-- <br> -->
+            <textarea id="ed" style="width:90%;height:60px;border-radius:10px;"></textarea>
+            <br><br>
+            <button id="go" class="child" style="width:20%;height:27px;width:65%;border-radius:10px;">发送</button>
+        </div>
+        <div style="height:200px;"></div>
+</body>
+<script src="cb.js">
+</script>
+
+</html>
