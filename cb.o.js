@@ -24,7 +24,7 @@
                 //console.log(myName);
 
                 const mturl = /(https?|ftps?|files?):\/\/[-A-Za-z0-9+&@#/%?=~_|!:,.;]+[-A-Za-z0-9+&@#/%=~_|]/gi;
-                const cbnbpwd = "@Char+Bay";
+                const cbnbpwd = "your password";
 
 
                 class AC {
@@ -102,7 +102,7 @@
                     }
                 }
 
-
+//format the text to HTML
                 function safeTextToHtml(text) {
                     const div = document.createElement('div');
                     div.textContent = text;
@@ -110,7 +110,7 @@
                         .replace(/\n/gi, '<br> ')
                         .replace(/  /gi, ' &nbsp;');
                 }
-
+//fast fetch 
                 function cbhttp(url, cb) {
                     fetch(url)
                         .then(response => {
@@ -230,7 +230,7 @@
                 }, 500);
 
 
-
+//post msg
                 go.addEventListener("click", () => {
                     if (unsupport) {
                         return;
